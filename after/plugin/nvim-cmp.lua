@@ -2,11 +2,6 @@ local cmp = require'cmp'
 local compare = require'cmp.config.compare'
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      require('snippy').expand_snippet(args.body)
-    end,
-  },
   mapping = cmp.mapping.preset.insert({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
@@ -34,9 +29,12 @@ cmp.setup({
         end, { 'i', 's' }),
   }),
 
+  performance = {
+    max_view_entries = 10,
+  },
+
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'snippy' },
     { name = 'fuzzy_buffer' },
   }),
 

@@ -5,11 +5,11 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
     Plug 'nvim-tree/nvim-tree.lua'
 
     -- Colors & UI 
-   Plug 'kyazdani42/nvim-web-devicons'
-   Plug 'EdenEast/nightfox.nvim'
-   Plug 'rebelot/kanagawa.nvim'
-   Plug 'blazkowolf/gruber-darker.nvim'
-   Plug 'ramojus/mellifluous.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'EdenEast/nightfox.nvim'
+    Plug 'rebelot/kanagawa.nvim'
+    Plug 'blazkowolf/gruber-darker.nvim'
+    Plug 'savq/melange-nvim'
 
     -- Editing
     Plug 'cohama/lexima.vim'
