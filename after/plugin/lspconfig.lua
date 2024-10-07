@@ -47,7 +47,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require'lspconfig'.gopls.setup{
     on_attach = on_attach,
-    capabilities = capabilities
+    -- capabilities = capabilities
 }
 
 -- local lspconfig = require('lspconfig')
