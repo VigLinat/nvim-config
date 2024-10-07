@@ -11,4 +11,4 @@ endif
 ]]
 
 -- vim.cmd [[ colorscheme gruber-darker ]]
-vim.cmd [[ colorscheme melange ]]
+vim.cmd.colorscheme 'melange'
