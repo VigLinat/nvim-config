@@ -43,8 +43,12 @@ local on_attach = function(client, bufnr)
 end
 
 -- Add additional capabilities supported by nvim-cmp
--- capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+require'lspconfig'.gopls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities
+}
 
 -- local lspconfig = require('lspconfig')
 -- local servers = {'pyright', 'tsserver', 'clangd'}
