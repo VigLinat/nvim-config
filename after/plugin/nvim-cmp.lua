@@ -30,7 +30,8 @@ cmp.setup({
   }),
 
   performance = {
-    max_view_entries = 10,
+    -- max_view_entries = 10,
+    throttle = 50
   },
 
   sources = cmp.config.sources({

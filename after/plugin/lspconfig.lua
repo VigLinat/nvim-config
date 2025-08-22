@@ -47,15 +47,16 @@ capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require'lspconfig'.gopls.setup{
     on_attach = on_attach,
-    -- capabilities = capabilities
+    capabilities = capabilities
 }
 
--- local lspconfig = require('lspconfig')
--- local servers = {'pyright', 'tsserver', 'clangd'}
--- -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
--- for _, lsp in ipairs(servers) do
---     lspconfig[lsp].setup{
---         on_attach = on_attach,
---         -- capabilities = capabilities,
---     }
--- end
+local lspconfig = require('lspconfig')
+-- local servers = {'pyright', 'clangd'}
+local servers = {'clangd'}
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup{
+        on_attach = on_attach,
+        capabilities = capabilities,
+    }
+end
